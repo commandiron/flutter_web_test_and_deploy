@@ -19,11 +19,18 @@ python -m http.server 8080
 4 - Open flutter web site in other tab\
 5 - You can see logs
 
-## DEPLOY SITE FOR TEST
+## DEPLOY SITE FOR TEST (STANDARD)
 ```
 flutter clean
 flutter pub get
 flutter build web --release
+firebase deploy
+```
+## DEPLOY SITE FOR TEST (WASM)
+```
+flutter clean
+flutter pub get
+flutter build web --wasm --release
 firebase deploy
 ```
 Don't forget increment version number in pubspec.yaml if you need
